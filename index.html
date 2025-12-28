@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>
+    <title> This Website Might Be Gay</title>
+    <body>
+        <h1>This Website Is Gay</h1>
+        <img src="flag.png">
+
+        <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* horizontal */
+      align-items: center;     /* vertical */
+      text-align: center;
+    }
+
+    img {
+      width: 200px;
+    }
+  </style>
+
+  <img src="flag.png">
+
+        <button id="playBtn">Play Music</button>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("playBtn");
+
+    // Try autoplay
+    music.play().then(() => {
+      button.style.display = "none";
+    }).catch(() => {
+      // Autoplay blocked
+      button.style.display = "block";
+    });
+
+    button.addEventListener("click", () => {
+      music.play();
+      button.style.display = "none";
+    });
+  </script>
+
+    </body>
+
+
+
+
+</html>
